@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    text-decoration: none;
+    
+}
+
+body {
+   /*  width: 100vw;
+    height: 100vh; 
+    overflow: scroll; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #34495e;
+}
+
+
+#memotest {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    /* Con js estoy tocando el la propiedad order de grid */
+    width: 90%;
+    max-height: 100vh;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.carta {
+    background-color: black;
+    border-style: solid;
+    border-color:black;
+    border-radius: 3px;
+    width: 180px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+}
+
+.carta:hover {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.frente {
+    display: none;
+}
+
+/* Flip carta */
+
+#memotest {
+    perspective: 1000px;
+}
+
+.carta {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+
+}
+
+.carta.flip {
+    transform: rotateY(180deg);
+    /* backface-visibility: hidden; */
+}
+
+.flip .frente {
+    transform: rotateY(180deg);
+ } 
+
+
+.flip .frente {
+    display: block;
+}
+
+.flip .dorso {
+    display: none;
+}
+
+
+/* 
+ .frente {
+    display: none;
+} 
+ */
+ 
+
+
+
+
+/* body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #34495e;
+    overflow:hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#memotest {
+    width: 90%;
+    height: 80%; 
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(6, 16.6%);
+    grid-template-rows: repeat(4, 25%);
+    gap: 10px;
+    row-gap: 10px;
+}
+
+figure {
+    background-color: black;
+     margin: 10px;  
+    display: flex;
+    flex-direction: column;
+}
+
+.dorso {
+    display: none;
+}  */
