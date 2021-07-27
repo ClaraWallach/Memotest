@@ -27,7 +27,7 @@ body {
     grid-template-rows: repeat(4, 1fr);
     row-gap: 10px;
     column-gap: 10px;
-    /* Con js estoy tocando el la propiedad order de grid */
+    /* Con js estoy modificando la propiedad order de grid */
     width: 90%;
     max-height: 100vh;
     
@@ -58,6 +58,13 @@ img {
 
 .frente {
     display: none;
+}
+
+
+#contadorMovimientos {
+    background-color: cadetblue;
+    width: 100px;
+    height: 100px;
 }
 
 /* Flip carta */

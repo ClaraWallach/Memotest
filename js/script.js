@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let bloquear = false; 
     let seleccion1 = '';
     let seleccion2 = '';
+    let movimientos = 0;
 
 /* Declaracion de funciones */
 
@@ -34,10 +35,23 @@ function pareja() {
         seleccion1 = '';
         seleccion2 = '';
         bloquear = false;
-        let numero = ''  
+        let numero = '';  
     }
     
+    function imprimirMovimientos () {
+       
+        movimientos += 1;
+        const contadorMovimientos= document.querySelector('#contadorMovimientos');
+        let texto = contadorMovimientos.innerHTML = '<p>Cantidad de movimientos: </p>' + '<p>' + movimientos + '</p>';
+    } 
     
+    function final() {
+        let cartasFlip = document.querySelectorAll ('.flip');
+
+        if (cartasFlip.length === cartas.length ) {
+            console.log ('ganaste');
+        } 
+    }
 
     function flip () {
 
@@ -53,8 +67,9 @@ function pareja() {
                 /* Segundo click */
                 seleccion2 = this; 
                 yaClickeo = false ;
+                imprimirMovimientos();
             }
-
+            
             if (seleccion1.classList[1] === seleccion2.classList[1] ) {
                 pareja()
                     
@@ -62,6 +77,9 @@ function pareja() {
                 bloquear = true; 
                 setTimeout (noPareja, 1000);        
             }
+
+            final ();
+
 
         }
 
