@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body id="nivel3">
@@ -112,9 +113,32 @@
                 <img class="dorso" src="img/atras.jpg">
             </figure>
         </section>
-        <section class="contadorMovimientos">
-            <p>Cantidad de movimientos:</p>
+        <article id="contadores">
+            <section class="contadorMovimientos">
+                <p>Cantidad de movimientos:</p>
+            </section>
+            <section class="contadorCorrectas">
+                <p>Correctas:</p>
+                <p>0/4</p>
+            </section>
+        </article>
+    </main>
+    <article id="final" class="oculto">
+        <h2>¡Ganaste!</h2>
+        <p id="cantidadMovimientos"></p>
+        <p>¿Que nivel queres jugar ahora?</p>
+        <section>
+            <button><a href="nivel1.html">
+                    <p>Facil</p>
+                </a></button>
+            <button><a href="nivel2.html">
+                    <p>Intermedio</p>
+                </a></button>
+            <button><a href="nivel3.html">
+                    <p>Dificil</p>
+                </a></button>
         </section>
-    </main>    
+    </article>
 </body>
+
 </html>
