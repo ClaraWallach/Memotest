@@ -41,17 +41,17 @@ function pareja() {
     function imprimirMovimientos () {
        
         movimientos += 1;
-        const contadorMovimientos= document.querySelector('#contadorMovimientos');
-        let texto = contadorMovimientos.innerHTML = '<p>Cantidad de movimientos: </p>' + '<p>' + movimientos + '</p>';
+        const contadorMovimientos= document.querySelector('.contadorMovimientos');
+        contadorMovimientos.innerHTML = '<p>Cantidad de movimientos: </p>' + '<p>' + movimientos + '</p>';
     } 
     
-    function final() {
+   /*  function final() {
         let cartasFlip = document.querySelectorAll ('.flip');
 
         if (cartasFlip.length === cartas.length ) {
             console.log ('ganaste');
         } 
-    }
+    } */
 
     function flip () {
 
@@ -78,7 +78,7 @@ function pareja() {
                 setTimeout (noPareja, 1000);        
             }
 
-            final ();
+            /* final (); */
 
 
         }
